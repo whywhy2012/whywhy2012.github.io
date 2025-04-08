@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NumPy教程 - 编程教程网站</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="navbar-brand">编程教程网站</a>
+        <ul class="nav-links">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="#">教程</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">联系方式</a></li>
+        </ul>
+    </nav>
+
+    <aside class="sidebar">
+        <h3>NumPy教程目录</h3>
+        <ul>
+            <li><a href="#intro">NumPy简介</a></li>
+            <li><a href="#install">安装和配置</a></li>
+            <li><a href="#array">数组创建和操作</a></li>
+            <li><a href="#indexing">索引和切片</a></li>
+            <li><a href="#shape">形状操作</a></li>
+            <li><a href="#math">数学运算</a></li>
+            <li><a href="#stats">统计函数</a></li>
+            <li><a href="#linear">线性代数</a></li>
+            <li><a href="#random">随机数生成</a></li>
+            <li><a href="#io">文件操作</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <div class="card" id="intro">
+            <h2>NumPy简介</h2>
+            <p>NumPy（Numerical Python）是Python科学计算的基础包。它提供了多维数组对象、各种派生对象以及用于数组快速操作的各种API。</p>
+            <p>NumPy的主要特点：</p>
+            <ul>
+                <li>强大的N维数组对象</li>
+                <li>广播功能函数</li>
+                <li>整合C/C++/Fortran代码的工具</li>
+                <li>线性代数、傅里叶变换、随机数生成等功能</li>
+            </ul>
+        </div>
+
+        <div class="card" id="install">
+            <h2>安装和配置</h2>
+            <p>安装NumPy：</p>
+            <pre><code># 使用pip安装
+pip install numpy
+
+# 使用conda安装
+conda install numpy</code></pre>
+            <p>导入NumPy：</p>
+            <pre><code>import numpy as np</code></pre>
+        </div>
+
+        <div class="card" id="array">
+            <h2>数组创建和操作</h2>
+            <p>创建NumPy数组的多种方式：</p>
+            <pre><code># 从列表创建数组
+arr = np.array([1, 2, 3, 4, 5])
+
+# 创建特殊数组
+zeros = np.zeros((3, 3))  # 全0数组
+ones = np.ones((2, 4))    # 全1数组
+eye = np.eye(3)          # 单位矩阵
+
+# 创建序列数组
+arange = np.arange(0, 10, 2)  # 步长为2的序列
+linspace = np.linspace(0, 1, 5)  # 均匀分布的点</code></pre>
+        </div>
+
+        <div class="card" id="indexing">
+            <h2>索引和切片</h2>
+            <p>数组的索引和切片操作：</p>
+            <pre><code># 创建示例数组
+arr = np.array([[1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9]])
+
+# 基本索引
+elem = arr[0, 0]    # 第一个元素
+row = arr[0]        # 第一行
+col = arr[:, 0]     # 第一列
+
+# 条件索引
+mask = arr > 5
+filtered = arr[mask]  # 大于5的元素
+
+# 花式索引
+indices = [0, 2]
+selected = arr[indices]  # 选择特定行</code></pre>
+        </div>
+
+        <div class="card" id="math">
+            <h2>数学运算</h2>
+            <p>NumPy提供了丰富的数学运算函数：</p>
+            <pre><code># 基本运算
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+add = a + b          # 加法
+sub = a - b          # 减法
+mul = a * b          # 乘法
+div = a / b          # 除法
+
+# 数学函数
+sqrt = np.sqrt(a)    # 平方根
+exp = np.exp(a)      # 指数
+log = np.log(a)      # 对数
+sin = np.sin(a)      # 正弦
+cos = np.cos(a)      # 余弦</code></pre>
+        </div>
+
+        <div class="card" id="stats">
+            <h2>统计函数</h2>
+            <p>常用的统计计算函数：</p>
+            <pre><code># 创建示例数组
+arr = np.array([[1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9]])
+
+# 统计计算
+mean = np.mean(arr)       # 平均值
+std = np.std(arr)         # 标准差
+var = np.var(arr)         # 方差
+min_val = np.min(arr)     # 最小值
+max_val = np.max(arr)     # 最大值
+sum_val = np.sum(arr)     # 求和
+
+# 按轴计算
+row_mean = np.mean(arr, axis=0)  # 列平均值
+col_mean = np.mean(arr, axis=1)  # 行平均值</code></pre>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL教程 - 编程教程网站</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="navbar-brand">编程教程网站</a>
+        <ul class="nav-links">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="#">教程</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">联系方式</a></li>
+        </ul>
+    </nav>
+
+    <aside class="sidebar">
+        <h3>SQL教程目录</h3>
+        <ul>
+            <li><a href="#intro">SQL简介</a></li>
+            <li><a href="#database">数据库基础</a></li>
+            <li><a href="#table">表的创建和管理</a></li>
+            <li><a href="#query">基本查询</a></li>
+            <li><a href="#where">WHERE子句</a></li>
+            <li><a href="#join">表连接</a></li>
+            <li><a href="#group">分组和聚合</a></li>
+            <li><a href="#subquery">子查询</a></li>
+            <li><a href="#index">索引</a></li>
+            <li><a href="#transaction">事务管理</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <div class="card" id="intro">
+            <h2>SQL简介</h2>
+            <p>SQL（Structured Query Language）是用于管理关系数据库的标准语言。它可以进行数据查询、插入、更新、删除等操作，是数据库操作的基础。</p>
+            <p>SQL的主要特点：</p>
+            <ul>
+                <li>简单易学</li>
+                <li>功能强大</li>
+                <li>标准统一</li>
+                <li>与各种数据库系统兼容</li>
+            </ul>
+        </div>
+
+        <div class="card" id="database">
+            <h2>数据库基础</h2>
+            <p>数据库操作的基本命令：</p>
+            <pre><code>-- 创建数据库
+CREATE DATABASE database_name;
+
+-- 使用数据库
+USE database_name;
+
+-- 删除数据库
+DROP DATABASE database_name;</code></pre>
+        </div>
+
+        <div class="card" id="table">
+            <h2>表的创建和管理</h2>
+            <p>创建和管理表的基本操作：</p>
+            <pre><code>-- 创建表
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    age INT,
+    department VARCHAR(50),
+    salary DECIMAL(10,2)
+);
+
+-- 修改表结构
+ALTER TABLE employees
+ADD COLUMN email VARCHAR(100);
+
+-- 删除表
+DROP TABLE employees;</code></pre>
+        </div>
+
+        <div class="card" id="query">
+            <h2>基本查询</h2>
+            <p>基本的SELECT查询语句：</p>
+            <pre><code>-- 查询所有列
+SELECT * FROM employees;
+
+-- 查询特定列
+SELECT name, age, salary
+FROM employees;
+
+-- 使用别名
+SELECT 
+    name AS employee_name,
+    salary AS annual_salary
+FROM employees;</code></pre>
+        </div>
+
+        <div class="card" id="where">
+            <h2>WHERE子句</h2>
+            <p>使用WHERE子句进行条件筛选：</p>
+            <pre><code>-- 基本条件
+SELECT * FROM employees
+WHERE age > 30;
+
+-- 多个条件
+SELECT * FROM employees
+WHERE department = 'IT'
+AND salary > 50000;
+
+-- 模糊查询
+SELECT * FROM employees
+WHERE name LIKE 'J%';
+
+-- IN操作符
+SELECT * FROM employees
+WHERE department IN ('IT', 'HR');</code></pre>
+        </div>
+
+        <div class="card" id="join">
+            <h2>表连接</h2>
+            <p>不同类型的表连接：</p>
+            <pre><code>-- 内连接
+SELECT e.name, d.department_name
+FROM employees e
+INNER JOIN departments d
+ON e.department_id = d.id;
+
+-- 左连接
+SELECT e.name, d.department_name
+FROM employees e
+LEFT JOIN departments d
+ON e.department_id = d.id;
+
+-- 右连接
+SELECT e.name, d.department_name
+FROM employees e
+RIGHT JOIN departments d
+ON e.department_id = d.id;</code></pre>
+        </div>
+
+        <div class="card" id="group">
+            <h2>分组和聚合</h2>
+            <p>使用GROUP BY和聚合函数：</p>
+            <pre><code>-- 基本分组
+SELECT department, COUNT(*) as employee_count
+FROM employees
+GROUP BY department;
+
+-- 聚合函数
+SELECT 
+    department,
+    AVG(salary) as avg_salary,
+    MAX(salary) as max_salary,
+    MIN(salary) as min_salary
+FROM employees
+GROUP BY department
+HAVING AVG(salary) > 50000;</code></pre>
+        </div>
+    </main>
+</body>
+</html>

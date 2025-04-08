@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML教程 - 编程教程网站</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="navbar-brand">编程教程网站</a>
+        <ul class="nav-links">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="#">教程</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">联系方式</a></li>
+        </ul>
+    </nav>
+
+    <aside class="sidebar">
+        <h3>HTML教程目录</h3>
+        <ul>
+            <li><a href="#intro">HTML简介</a></li>
+            <li><a href="#structure">HTML文档结构</a></li>
+            <li><a href="#text">文本标签</a></li>
+            <li><a href="#links">链接和图片</a></li>
+            <li><a href="#lists">列表</a></li>
+            <li><a href="#tables">表格</a></li>
+            <li><a href="#forms">表单</a></li>
+            <li><a href="#semantic">语义化标签</a></li>
+            <li><a href="#layout">页面布局</a></li>
+            <li><a href="#media">多媒体元素</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <div class="card" id="intro">
+            <h2>HTML简介</h2>
+            <p>HTML（HyperText Markup Language）是创建网页的标准标记语言。它描述了网页的结构，是网页内容的骨架。</p>
+            <p>HTML的主要特点：</p>
+            <ul>
+                <li>简单易学</li>
+                <li>跨平台</li>
+                <li>灵活性强</li>
+                <li>与CSS和JavaScript配合使用</li>
+            </ul>
+        </div>
+
+        <div class="card" id="structure">
+            <h2>HTML文档结构</h2>
+            <p>一个基本的HTML文档结构：</p>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-CN"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;页面标题&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;这是一个标题&lt;/h1&gt;
+    &lt;p&gt;这是一个段落。&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <div class="card" id="text">
+            <h2>文本标签</h2>
+            <p>常用的文本标签：</p>
+            <pre><code>&lt;h1&gt;一级标题&lt;/h1&gt;
+&lt;h2&gt;二级标题&lt;/h2&gt;
+&lt;p&gt;段落文本&lt;/p&gt;
+&lt;strong&gt;粗体文本&lt;/strong&gt;
+&lt;em&gt;斜体文本&lt;/em&gt;
+&lt;br&gt;换行
+&lt;hr&gt;水平线</code></pre>
+        </div>
+
+        <div class="card" id="links">
+            <h2>链接和图片</h2>
+            <p>创建链接和插入图片：</p>
+            <pre><code>&lt;!-- 链接 --&gt;
+&lt;a href="https://www.example.com"&gt;访问示例网站&lt;/a&gt;
+
+&lt;!-- 图片 --&gt;
+&lt;img src="image.jpg" alt="图片描述"&gt;
+
+&lt;!-- 图片链接 --&gt;
+&lt;a href="page.html"&gt;
+    &lt;img src="button.jpg" alt="点击按钮"&gt;
+&lt;/a&gt;</code></pre>
+        </div>
+
+        <div class="card" id="forms">
+            <h2>表单</h2>
+            <p>创建交互式表单：</p>
+            <pre><code>&lt;form action="/submit" method="post"&gt;
+    &lt;label for="username"&gt;用户名：&lt;/label&gt;
+    &lt;input type="text" id="username" name="username"&gt;
+
+    &lt;label for="password"&gt;密码：&lt;/label&gt;
+    &lt;input type="password" id="password" name="password"&gt;
+
+    &lt;label for="email"&gt;邮箱：&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;
+
+    &lt;input type="submit" value="提交"&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+
+        <div class="card" id="semantic">
+            <h2>语义化标签</h2>
+            <p>HTML5引入的语义化标签：</p>
+            <pre><code>&lt;header&gt;网页头部&lt;/header&gt;
+&lt;nav&gt;导航菜单&lt;/nav&gt;
+&lt;main&gt;主要内容&lt;/main&gt;
+&lt;article&gt;文章内容&lt;/article&gt;
+&lt;section&gt;区块&lt;/section&gt;
+&lt;aside&gt;侧边栏&lt;/aside&gt;
+&lt;footer&gt;页脚&lt;/footer&gt;</code></pre>
+        </div>
+    </main>
+</body>
+</html>

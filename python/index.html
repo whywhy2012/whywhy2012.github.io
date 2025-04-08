@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python教程 - 编程教程网站</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="navbar-brand">编程教程网站</a>
+        <ul class="nav-links">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="#">教程</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">联系方式</a></li>
+        </ul>
+    </nav>
+
+    <aside class="sidebar">
+        <h3>Python教程目录</h3>
+        <ul>
+            <li><a href="#intro">Python简介</a></li>
+            <li><a href="#install">Python安装</a></li>
+            <li><a href="#basic">基础语法</a></li>
+            <li><a href="#variables">变量和数据类型</a></li>
+            <li><a href="#control">控制流程</a></li>
+            <li><a href="#functions">函数</a></li>
+            <li><a href="#oop">面向对象编程</a></li>
+            <li><a href="#modules">模块和包</a></li>
+            <li><a href="#exceptions">异常处理</a></li>
+            <li><a href="#files">文件操作</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <div class="card" id="intro">
+            <h2>Python简介</h2>
+            <p>Python是一种解释型、高级编程语言，由Guido van Rossum于1991年创建。Python以其简洁的语法和丰富的库生态系统而闻名，是初学者学习编程的理想选择。</p>
+            <p>Python的主要特点：</p>
+            <ul>
+                <li>易于学习和使用</li>
+                <li>可读性强</li>
+                <li>跨平台</li>
+                <li>丰富的标准库</li>
+                <li>强大的第三方库支持</li>
+            </ul>
+        </div>
+
+        <div class="card" id="install">
+            <h2>Python安装</h2>
+            <p>在开始学习Python之前，我们需要先安装Python环境。Python的安装非常简单：</p>
+            <ol>
+                <li>访问Python官网 <a href="https://www.python.org">www.python.org</a></li>
+                <li>下载最新版本的Python安装包</li>
+                <li>运行安装程序，记得勾选"Add Python to PATH"选项</li>
+                <li>完成安装后，打开命令行输入 python --version 验证安装</li>
+            </ol>
+        </div>
+
+        <div class="card" id="basic">
+            <h2>基础语法</h2>
+            <p>Python的基础语法非常简单直观：</p>
+            <pre><code># 这是一个简单的Python程序
+print("Hello, World!")
+
+# 变量定义
+name = "Python"
+age = 30
+
+# 条件语句
+if age > 20:
+    print(f"{name} 是一个成熟的编程语言")
+
+# 循环
+for i in range(3):
+    print(f"第{i+1}次循环")</code></pre>
+        </div>
+
+        <div class="card" id="variables">
+            <h2>变量和数据类型</h2>
+            <p>Python中的主要数据类型包括：</p>
+            <ul>
+                <li>数字（整数、浮点数）</li>
+                <li>字符串</li>
+                <li>列表</li>
+                <li>元组</li>
+                <li>字典</li>
+                <li>集合</li>
+            </ul>
+            <pre><code># 数字
+x = 10    # 整数
+y = 3.14  # 浮点数
+
+# 字符串
+name = "Python"
+
+# 列表
+fruits = ["苹果", "香蕉", "橙子"]
+
+# 字典
+person = {
+    "name": "张三",
+    "age": 25
+}</code></pre>
+        </div>
+    </main>
+</body>
+</html>
